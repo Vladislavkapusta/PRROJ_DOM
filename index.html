@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Slider</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="#slider">Слайдер</a></li>
+      <li><a href="#spisok">Список</a></li>
+      <li><a href="#phone-form">Контакты</a></li>
+    </ul>
+  </nav>
+  <h1>Прикольные животные</h1>
+	<div id="slider" class="slider">
+		<div class="images">
+			<img class = "sldimg" src="./sldimg/image1.jpg" alt="Image 1">
+			<img class = "sldimg" src="./sldimg/image2.jpg" alt="Image 2">
+			<img class = "sldimg" src="./sldimg/image3.jpg" alt="Image 3">
+		</div class = "pointer">
+		<input type="range" min="0" max="2" step="1" value="0" onchange="sliderChange(this)">
+	</div>
+  <script src="script.js"></script>
+
+  <div id="spisok" class="dropdown">
+    <button class="dropbtn">Это животные</button>
+    <div class="dropdown-content">
+      <a href="https://ru.wikipedia.org/wiki/Кошка" target="_blank">Кошка</a>
+      <a href="https://ru.wikipedia.org/wiki/Тигр" target="_blank">Тигр</a>
+      <a href="https://ru.wikipedia.org/wiki/Панда" target="_blank">Панда</a>
+    </div>
+  </div>
+  
+  <form id="phone-form" method="post">
+    <label for="phone">Введите ваш номер телефона:</label>
+    <input type="tel" id="phone" name="phone" required>
+    <button  type="reset"  onclick="push()">Отправить</button>
+  </form>
+
+</body>
+</html>
